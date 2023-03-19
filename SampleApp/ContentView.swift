@@ -8,12 +8,18 @@
 import SwiftUI
 
 struct ContentView: View {
+
+    private var apiKey1: String {
+        SampleAppSecretManager.shared.apiKey1
+    }
+
+    private var apiKey2: String {
+        SampleAppSecretManager.shared.apiKey2
+    }
+
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
+            Text("API KEY 1: \(apiKey1) \n\n API KEY 2: \(apiKey2)")
         }
         .padding()
     }
